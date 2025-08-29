@@ -8,7 +8,7 @@ const pageConfig: PageConfig = {
     { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
   ],
   group: {
-    '🌐 Public': ['main_site', 'api_health'],
+    '🌐 Public': ['status_page', 'health_endpoint'],
   },
 }
 
@@ -17,15 +17,15 @@ const workerConfig: WorkerConfig = {
   // passwordProtection: 'username:password',
   monitors: [
     {
-      id: 'main_site',
-      name: 'Main Website',
+      id: 'status_page',
+      name: 'Status page',
       method: 'GET',
-      target: 'https://dopamine-dev.com',
+      target: 'https://status.dopamine-dev.com',
       expectedCodes: [200],
     },
     {
-      id: 'api_health',
-      name: 'API Health',
+      id: 'health_endpoint',
+      name: 'Health endpoint',
       method: 'GET',
       target: 'https://dopamine-dev.com/health',
       expectedCodes: [200],
