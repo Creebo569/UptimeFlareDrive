@@ -21,7 +21,6 @@ const workerConfig: WorkerConfig = {
       name: 'Main Website',
       method: 'GET',
       target: 'https://dopamine-dev.com',
-      interval: 60,
       expectedCodes: [200],
     },
     {
@@ -29,12 +28,10 @@ const workerConfig: WorkerConfig = {
       name: 'API Health',
       method: 'GET',
       target: 'https://dopamine-dev.com/health',
-      interval: 60,
       expectedCodes: [200],
     },
   ],
   notification: {
-    // notifications disabled for now
     timeZone: 'Europe/London',
     gracePeriod: 5,
     skipNotificationIds: [],
