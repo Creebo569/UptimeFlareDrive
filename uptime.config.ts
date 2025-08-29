@@ -34,7 +34,7 @@ const workerConfig: WorkerConfig = {
     },
   ],
   notification: {
-    // leave notifications off for now
+    // notifications disabled for now
     timeZone: 'Europe/London',
     gracePeriod: 5,
     skipNotificationIds: [],
@@ -47,5 +47,4 @@ const workerConfig: WorkerConfig = {
 
 const maintenances: MaintenanceConfig[] = []
 
-// Don't forget this, otherwise compilation fails.
 export { pageConfig, workerConfig, maintenances }
